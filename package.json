@@ -1,0 +1,25 @@
+{
+  "name": "alude-stack-challenge",
+  "version": "1.0.0",
+  "description": "Resolucao do Desafio de Engenharia da Alude",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgkramar/Alude_Stack.git"
+  },
+  "author": "Murilo G K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgkramar/Alude_Stack/issues"
+  },
+  "homepage": "https://github.com/mgkramar/Alude_Stack#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "babel-jest": "^26.5.2",
+    "jest": "^26.5.2"
+  }
+}
