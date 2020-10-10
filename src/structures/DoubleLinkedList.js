@@ -53,7 +53,8 @@ export default class DoubleLinkedList {
   }
 
   getNthItem(index) {
-    return this.getNthElement(index).getValue();
+    const element = this.getNthElement(index);
+    return element === null ? null : element.getValue();
   }
 
   getLastElement() {

@@ -54,3 +54,11 @@ test("Se o valor do topo a ser removido da AludeStack for tambem o minimo, o val
   expect(stack.peek()).toBe(undefined);
   expect(stack.peekMinValue()).toBe(undefined);
 });
+
+test("A alude stack deve retornar seu tamanho", () => {
+  const stack = new AludeStack();
+  stack.push(2.0);
+  expect(stack.size()).toBe(1);
+  stack.pop(1.0);
+  expect(stack.size()).toBe(0);
+});

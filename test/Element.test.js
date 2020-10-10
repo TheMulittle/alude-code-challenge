@@ -22,3 +22,21 @@ test("Um Element deve poder ser inicializado com valor e referencia para Element
   expect(secondElement.getPreviousElement()).toBe(firstElement);
   expect(secondElement.getNextElement()).toEqual(firstElement);
 });
+
+test("Um Element deve permitir definir seu posterior", () => {
+  const firstElement = new Element(1.0);
+  const secondElement = new Element(2.0);
+
+  firstElement.setNextElement(secondElement);
+
+  expect(firstElement.getNextElement()).toBe(secondElement);
+});
+
+test("Um Element deve permitir definir seu anterior", () => {
+  const firstElement = new Element(1.0);
+  const secondElement = new Element(2.0);
+
+  firstElement.setPreviousElement(secondElement);
+
+  expect(firstElement.getPreviousElement()).toBe(secondElement);
+});
