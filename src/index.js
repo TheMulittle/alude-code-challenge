@@ -1,6 +1,6 @@
 import AludeStack from "./structures/AludeStack.js";
 
-function main(a, b) {
+function main() {
   const stack = new AludeStack();
 
   let operation = "push";
@@ -33,10 +33,10 @@ function main(a, b) {
 }
 
 function ammendStack(stack, size) {
-  let times = [];
+  const times = [];
 
   for (let i = 0; i < size; i++) {
-    let randomFloat = Math.random();
+    const randomFloat = Math.random();
 
     const mark = process.hrtime();
     stack.push(randomFloat);
@@ -48,7 +48,7 @@ function ammendStack(stack, size) {
 }
 
 function emptyStack(stack, size) {
-  let times = [];
+  const times = [];
 
   for (let i = 0; i < size; i++) {
     const mark = process.hrtime();
@@ -61,9 +61,9 @@ function emptyStack(stack, size) {
 }
 
 function peekMinMultipleTimes(stack) {
-  let times = [];
+  const times = [];
 
-  let size = 1000;
+  const size = 1000;
 
   for (let i = 0; i < size; i++) {
     const mark = process.hrtime();
@@ -76,10 +76,10 @@ function peekMinMultipleTimes(stack) {
 }
 
 function profile(start, times, operation) {
-  let avg = times.reduce((a, b) => a + b, 0) / times.length;
-  let max = Math.max(...times);
-  let min = Math.min(...times);
-  let norm = console.log(`--------------------------------------------- `);
+  const avg = times.reduce((a, b) => a + b, 0) / times.length;
+  const max = Math.max(...times);
+  const min = Math.min(...times);
+
   console.log(
     `Operacao ${operation} ${times.length} vezes em uma stack que comeceu em ${start} posicoes - minimo tempo:  ${min} (ns): `
   );
