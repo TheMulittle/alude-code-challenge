@@ -1,4 +1,4 @@
-import DoubleLinkedList from "./DoubleLinkedList";
+import DoubleLinkedList from "./DoubleLinkedList.js";
 
 export default class Stack {
   constructor() {

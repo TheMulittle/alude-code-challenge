@@ -1,4 +1,4 @@
-import Stack from "./Stack";
+import Stack from "./Stack.js";
 
 export default class AludeStack {
   constructor() {

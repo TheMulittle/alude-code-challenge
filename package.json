@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Resolucao do Desafio de Engenharia da Alude",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "jest --coverage",
     "start": "node src/index.js"
