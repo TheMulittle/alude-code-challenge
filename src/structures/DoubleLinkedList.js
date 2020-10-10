@@ -61,6 +61,6 @@ export default class DoubleLinkedList {
   }
 
   getLastItem() {
-    return this.getLastElement().getValue();
+    return this.getLastElement() ? this.getLastElement().getValue() : undefined;
   }
 }

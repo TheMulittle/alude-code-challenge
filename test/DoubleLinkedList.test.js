@@ -5,6 +5,18 @@ test("Uma DoubleLinkedList vazia e recem incializada deve ter tamanho 0", () => 
   expect(list.size()).toEqual(0);
 });
 
+test("Uma DoubleLinkedList vazia e recem incializada deve retornar undefined quando interrogado pelo ultimo item", () => {
+  const list = new DoubleLinkedList();
+  expect(list.getLastItem()).toBe(undefined);
+});
+
+test("Uma DoubleLinkedList após ser esvaziada deve retornar undefined quando interrogado pelo ultimo item", () => {
+  const list = new DoubleLinkedList();
+  list.addItemAtLastPosition(2.0);
+  list.removeItemAtLastPosition();
+  expect(list.getLastItem()).toBe(undefined);
+});
+
 test("Uma DoubleLinkedList deve permitir adicionar valores", () => {
   const list = new DoubleLinkedList();
   list.addItemAtLastPosition(2.0);
