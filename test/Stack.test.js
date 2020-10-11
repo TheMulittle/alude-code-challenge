@@ -2,7 +2,7 @@ import Stack from "../src/structures/Stack";
 
 test("Uma Stack vazia nao deveria ter seu tamanho diminuido", () => {
   const stack = new Stack();
-  expect(stack.pop()).toBe(null);
+  expect(stack.pop()).toBe(undefined);
   expect(stack.size()).toBe(0);
 });
 
