@@ -17,7 +17,7 @@ Após instalação do Node (que instala o gerenciador de pacotes NPM), será pre
 $ npm run install
 ```
 
-Existem dois meios principais de interagir com o projeto. O primeiro é o comando abaixo resposável por rodar a suite de testes com Jest e apresentar o relatorio de cobertura de testes. Ao final da execução o relatório de testes pode ser obtido no seguinte caminho: \${diretorio_do_projeto}/coverage/lcov-report/index.html. O badge acima 'covereage' reflete essa informação
+Existem trës meios principais de interagir com o projeto. O primeiro é o comando abaixo resposável por rodar a suite de testes com Jest e apresentar o relatorio de cobertura de testes. Ao final da execução o relatório de testes pode ser obtido no seguinte caminho: \${diretorio_do_projeto}/coverage/lcov-report/index.html. O badge acima 'covereage' reflete essa informação
 
 ```
 $ npm run test
@@ -27,6 +27,12 @@ Também é possível rodar um aplicativo teste a fim de empiricamente medir o te
 
 ```
 $ npm run start
+```
+
+Também é possível rodar um benchmark utilizando ferramentas externas. Para isso, execute o seguinte comando
+
+```
+$ npm run benchmark
 ```
 
 O programa de forma nehuma prova que o custo das operações é independente da quantidade de dados na estrutura de dados, porém ele ajuda a ter um entendimento empirico do fato.
