@@ -41,9 +41,9 @@ test("Tentar remover itens de uma DoubleLinkedList vazia nao deve deixar seu tam
 test("Uma DoubleLinkedList deve retornar o n-esimo item", () => {
   const list = new DoubleLinkedList();
   list.addItemAtLastPosition(1.0);
-  list.addItemAtLastPosition(2.0);
+  expect(list.getNthItem(0)).toEqual(1.0);
   list.addItemAtLastPosition(5.0);
-  expect(list.getNthItem(2)).toEqual(5.0);
+  expect(list.getNthItem(1)).toEqual(5.0);
 });
 
 test("Uma DoubleLinkedList deve retornar null se o n-esimo item requerido nao faz parte da lista", () => {
@@ -51,6 +51,7 @@ test("Uma DoubleLinkedList deve retornar null se o n-esimo item requerido nao fa
   list.addItemAtLastPosition(1.0);
   list.addItemAtLastPosition(2.0);
   list.addItemAtLastPosition(5.0);
+  expect(list.getNthItem(3)).toEqual(null);
   expect(list.getNthItem(5)).toEqual(null);
 });
 
