@@ -23,12 +23,20 @@ test("Toda vez que um valor menor for adicionado aa AludeStack, o valor mínimo 
   expect(stack.peek()).toBe(2.0);
   expect(stack.peekMinValue()).toBe(2.0);
 
-  stack.push(3.0);
-  expect(stack.peek()).toBe(3.0);
+  stack.push(2.1);
+  expect(stack.peek()).toBe(2.1);
   expect(stack.peekMinValue()).toBe(2.0);
 
   stack.push(-1.0);
   expect(stack.peek()).toBe(-1.0);
+  expect(stack.peekMinValue()).toBe(-1.0);
+
+  stack.push(0);
+  expect(stack.peek()).toBe(0);
+  expect(stack.peekMinValue()).toBe(-1.0);
+
+  stack.push(-0.5);
+  expect(stack.peek()).toBe(-0.5);
   expect(stack.peekMinValue()).toBe(-1.0);
 });
 
@@ -38,6 +46,9 @@ test("Se o valor do topo a ser removido da AludeStack for tambem o minimo, o val
   stack.push(1.0);
   stack.push(5.0);
   stack.push(1.0);
+
+  expect(stack.peek()).toBe(1.0);
+  expect(stack.peekMinValue()).toBe(1.0);
 
   stack.pop();
   expect(stack.peek()).toBe(5.0);
@@ -57,8 +68,9 @@ test("Se o valor do topo a ser removido da AludeStack for tambem o minimo, o val
 
 test("A alude stack deve retornar seu tamanho", () => {
   const stack = new AludeStack();
+  expect(stack.size()).toBe(0);
   stack.push(2.0);
   expect(stack.size()).toBe(1);
-  stack.pop(1.0);
+  stack.pop();
   expect(stack.size()).toBe(0);
 });

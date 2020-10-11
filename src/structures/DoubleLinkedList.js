@@ -20,7 +20,7 @@ export default class DoubleLinkedList {
       currentLastElement.setNextElement(elementToBeAdded);
       this.lastElement = elementToBeAdded;
     }
-    this.listSize++;
+    this.listSize += 1;
   }
 
   removeItemAtLastPosition() {
@@ -35,7 +35,7 @@ export default class DoubleLinkedList {
     } else {
       this.lastElement = this.lastElement.getPreviousElement();
     }
-    this.listSize--;
+    this.listSize -= 1;
 
     return currentLastElement.getValue();
   }
